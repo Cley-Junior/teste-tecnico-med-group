@@ -1,26 +1,72 @@
 <ion-content [fullscreen]="false">
-  <div>
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>
-          Tabela de Escolas Registradas
-        </ion-card-title>
-      </ion-card-header>
-      <div class="table100 ver1 m-b-110">
-        <div class="table100-head"></div>
-        <div class="table100-body js-pscroll ps ps--active-y"></div>
-      </div>
-      <table>
-        <thead>
-          <tr class="row100 head">
-            <th class="cell100 column1">Hello</th>
-            <th class="cell100 column1">World</th>
-            <th class="cell100 column1">Are</th>
-            <th class="cell100 column1">You</th>
-            <th class="cell100 column1">Okay</th>
-          </tr>
-        </thead>
-      </table>
-    </ion-card>
-  </div>
+  <br>
+  <br>
+  <br>
+  <ion-searchbar [debounce]="1000" (ionInput)="handleInput($event)" placeholder="Digite o nome da escola"></ion-searchbar>
+  <ion-list *ngFor="let school of results">
+    <ion-item>
+      <ion-label>{{school.name}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button id="open-modal">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-modal #modal trigger="open-modal" [canDismiss]="canDismiss">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button (click)="modal.dismiss()">Fechar</ion-button>
+          </ion-buttons>
+          <ion-title>Registrar Nova Escola</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="confirm()">Registrar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-card>
+
+          <ion-input
+            label="Nome"
+            labelPlacement="stacked"
+            [(ngModel)]="name"
+            [clearInput]="true"
+            placeholder="Digite o nome da escola"
+          >
+          </ion-input>
+
+          <ion-input
+            label="CEP"
+            labelPlacement="stacked"
+            [(ngModel)]="cep"
+            [clearInput]="true"
+            placeholder="Digite o cep da escola"
+          >
+          </ion-input>
+
+          <ion-input
+            label="Telefone"
+            labelPlacement="stacked"
+            [(ngModel)]="phone"
+            [clearInput]="true"
+            placeholder="Digite o telefone de contato da escola"
+          >
+          </ion-input>
+
+          <ion-input
+            label="E-Mail"
+            labelPlacement="stacked"
+            [(ngModel)]="email"
+            [clearOnEdit]="true"
+            placeholder="Digite o e-mail de contato da escola"
+          >
+          </ion-input>
+
+        </ion-card>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
 </ion-content>

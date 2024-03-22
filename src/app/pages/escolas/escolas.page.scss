@@ -1,23 +1,12 @@
-ion-content div
-{
-  display: flex;
-  justify-content: center;
-  width: auto;
-  height: auto;
-}
-
 ion-card
 {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 300px;
   flex-direction: column;
-  width: 340px;
-  height: 440px;
+  justify-content: center;
 
-  ion-card-title
+  ion-input
   {
-    margin-bottom: 40px;
+    margin: 16px;
+    color: white;
   }
 }

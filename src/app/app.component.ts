@@ -11,8 +11,6 @@ export class AppComponent {
     { title: 'Página Inicial', url: '/pagina-inicial', icon: 'home' },
     { title: 'Escolas', url: '/escolas', icon: 'school' },
     { title: 'Turmas', url: '/turmas', icon: 'people' },
-    { title: 'Entrar', url: '/login', icon: 'log-in' },
-    { title: 'Registrar', url: '/registrar', icon: 'person-add' },
   ];
   constructor(private router: Router)
   {
