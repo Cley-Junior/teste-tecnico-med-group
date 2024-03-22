@@ -2,6 +2,11 @@ ion-menu ion-content {
   --background: var(--ion-item-background, var(--ion-background-color, #fff));
 }
 
+ion-header
+{
+  opacity: 90%;
+}
+
 ion-menu.md ion-content {
   --padding-start: 8px;
   --padding-end: 8px;
@@ -29,8 +34,18 @@ ion-menu.md ion-list#inbox-list {
 ion-menu.md ion-list#inbox-list ion-list-header {
   font-size: 22px;
   font-weight: 600;
+  margin-bottom: 30px;
+
 
   min-height: 20px;
+
+  span
+  {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 ion-menu.md ion-list#labels-list ion-list-header {

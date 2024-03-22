@@ -1,18 +1,26 @@
 import { Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
+  public url!: string;
   public appPages = [
-    { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/spam', icon: 'warning' },
+    { title: 'Página Inicial', url: '/pagina-inicial', icon: 'home' },
+    { title: 'Escolas', url: '/escolas', icon: 'school' },
+    { title: 'Turmas', url: '/turmas', icon: 'people' },
+    { title: 'Entrar', url: '/login', icon: 'log-in' },
+    { title: 'Registrar', url: '/registrar', icon: 'person-add' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() {}
+  constructor(private router: Router)
+  {
+    this.router.events.subscribe((param) => {
+      if (param instanceof NavigationEnd)
+      {
+        const titleIndex = this.appPages.findIndex( x => x.url === param.url );
+        this.url = this.appPages[titleIndex].title;
+      }})
+  }
 }
