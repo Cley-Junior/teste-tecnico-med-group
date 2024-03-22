@@ -1,0 +1,7 @@
+{
+  "name": "teste-tecnico-med-group",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
