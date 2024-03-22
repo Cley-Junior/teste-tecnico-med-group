@@ -44,6 +44,8 @@
             [(ngModel)]="cep"
             [clearInput]="true"
             placeholder="Digite o cep da escola"
+            [maskito]="cepMask"
+            [maskitoElement]="maskPredicate"
           >
           </ion-input>
 
@@ -53,6 +55,8 @@
             [(ngModel)]="phone"
             [clearInput]="true"
             placeholder="Digite o telefone de contato da escola"
+            [maskito]="phoneMask"
+            [maskitoElement]="maskPredicate"
           >
           </ion-input>
 

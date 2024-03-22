@@ -8,11 +8,14 @@ import { EscolasPageRoutingModule } from './escolas-routing.module';
 
 import { EscolasPage } from './escolas.page';
 
+import { MaskitoDirective } from '@maskito/angular';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    MaskitoDirective,
     EscolasPageRoutingModule
   ],
   declarations: [EscolasPage]

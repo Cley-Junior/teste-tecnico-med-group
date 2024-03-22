@@ -5,3 +5,16 @@ ion-content div
   width: auto;
   height: auto;
 }
+
+ion-card
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  ion-input
+  {
+    margin: 16px;
+    color: white;
+  }
+}
