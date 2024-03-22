@@ -1,0 +1,29 @@
+ion-img
+{
+  opacity: 70%;
+  position: relative;
+  max-height: 40%;
+  //Quero botar essa porra só na parte de cima por favor
+}
+
+ion-img#img_logo
+{
+  display: flex;
+  position: absolute;
+  top: 12%;
+  left: 3%;
+  opacity: 100%;
+}
+
+ion-card
+{
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+
+  ion-card-content
+  {
+    text-justify: auto;
+    color: black;
+  }
+}

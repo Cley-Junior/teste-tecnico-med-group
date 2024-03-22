@@ -1,0 +1,18 @@
+ion-grid
+{
+  display: flex;
+  justify-content:space-between;
+}
+
+ion-item
+{
+  margin-bottom: 18px;
+}
+
+ion-card
+{
+  display: flex;
+  justify-content: center;
+  margin-top: 300px;
+  flex-direction: column;
+}

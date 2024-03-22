@@ -10,6 +10,7 @@ export class EscolasPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log();
   }
 
 }
