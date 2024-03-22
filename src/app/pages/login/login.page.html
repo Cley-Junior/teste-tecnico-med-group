@@ -1,40 +1,39 @@
 <ion-content [fullscreen]="false">
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>
-        Entrar
-      </ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-list>
-        <ion-item>
-          <ion-input
-            label="Usuário ou e-mail"
-            labelPlacement="stacked"
-            [clearInput]="true"
-            placeholder="Digite seu endereço de e-mail"
-            fill="outline"
-          >
-          </ion-input>
-        </ion-item>
+  <div style="display: flex; justify-content: center;">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          Entrar
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+            <ion-input
+              label="Usuário ou E-mail"
+              labelPlacement="stacked"
+              [clearInput]="true"
+              placeholder="Digite seu endereço de e-mail"
+              fill="outline"
+              style="margin-bottom: 22px;"
+            >
+            </ion-input>
 
-        <ion-item>
-          <ion-input
-            label="Senha"
-            labelPlacement="stacked"
-            [clearOnEdit]="true"
-            placeholder="Digite sua senha"
-            fill="outline"
-          >
-          </ion-input>
-        </ion-item>
+            <ion-input
+              label="Senha"
+              labelPlacement="stacked"
+              [clearOnEdit]="true"
+              placeholder="Digite sua senha"
+              fill="outline"
+            >
+            </ion-input>
 
-        <ion-grid>
-          <ion-button fill="clear" href="/registrar">Registrar-se</ion-button>
-          <ion-button fill="clear">Entrar</ion-button>
-        </ion-grid>
+          <ion-grid>
+            <ion-button fill="clear" href="/registrar">Registrar-se</ion-button>
+            <ion-button fill="clear">Entrar</ion-button>
+          </ion-grid>
 
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

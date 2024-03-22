@@ -1,18 +1,38 @@
 ion-grid
 {
   display: flex;
-  justify-content:space-between;
-}
-
-ion-item
-{
-  margin-bottom: 18px;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
 }
 
 ion-card
 {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 300px;
   flex-direction: column;
+  width: 340px;
+  height: 440px;
+
+  ion-card-title
+  {
+    margin-bottom: 40px;
+  }
+}
+
+ion-list
+{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+ion-content div
+{
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: auto;
 }

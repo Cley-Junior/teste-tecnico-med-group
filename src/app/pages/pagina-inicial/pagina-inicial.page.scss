@@ -27,3 +27,10 @@ ion-card
     color: black;
   }
 }
+
+ion-content div
+{
+  display: flex;
+  justify-content: start;
+  padding-left: 40px;
+}

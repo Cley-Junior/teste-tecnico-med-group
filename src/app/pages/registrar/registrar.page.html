@@ -1,63 +1,58 @@
 
 <ion-content [fullscreen]="false">
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>
-        Registrar-se
-      </ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-list>
-        <ion-item>
-          <ion-input
-            label="Usuário"
-            labelPlacement="stacked"
-            [clearInput]="true"
-            placeholder="Digite seu nome de usuário"
-            fill="outline"
-          >
-          </ion-input>
-        </ion-item>
+  <div>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          Registrar-se
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
 
-        <ion-item>
-          <ion-input
-            label="E-Mail"
-            labelPlacement="stacked"
-            [clearInput]="true"
-            placeholder="Digite seu endereço de e-mail"
-            fill="outline"
-          >
-          </ion-input>
-        </ion-item>
+            <ion-input
+              label="Usuário"
+              labelPlacement="stacked"
+              [clearInput]="true"
+              placeholder="Digite seu nome de usuário"
+              fill="outline"
+            >
+            </ion-input>
 
-        <ion-item>
-          <ion-input
-            label="Confirme o E-Mail"
-            labelPlacement="stacked"
-            [clearInput]="true"
-            placeholder="Confirme o seu endereço de e-mail"
-            fill="outline"
-          >
-          </ion-input>
-        </ion-item>
+            <ion-input
+              label="E-Mail"
+              labelPlacement="stacked"
+              [clearInput]="true"
+              placeholder="Digite seu endereço de e-mail"
+              fill="outline"
+            >
+            </ion-input>
 
-        <ion-item>
-          <ion-input
-            label="Senha"
-            labelPlacement="stacked"
-            [clearOnEdit]="true"
-            placeholder="Digite sua senha"
-            fill="outline"
-          >
-          </ion-input>
-        </ion-item>
+            <ion-input
+              label="Confirme o E-Mail"
+              labelPlacement="stacked"
+              [clearInput]="true"
+              placeholder="Confirme o seu endereço de e-mail"
+              fill="outline"
+            >
+            </ion-input>
 
-        <ion-grid>
-          <ion-button fill="clear" href="/">Voltar</ion-button>
-          <ion-button fill="clear" href="/registrar">Registrar conta</ion-button>
-        </ion-grid>
+            <ion-input
+              label="Senha"
+              labelPlacement="stacked"
+              [clearOnEdit]="true"
+              placeholder="Digite sua senha"
+              fill="outline"
+            >
+            </ion-input>
 
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
+          <ion-grid>
+            <ion-button fill="clear" href="/">Voltar</ion-button>
+            <ion-button fill="clear" href="/registrar">Registrar conta</ion-button>
+          </ion-grid>
+
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

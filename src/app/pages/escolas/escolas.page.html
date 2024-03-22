@@ -1,20 +1,26 @@
 <ion-content [fullscreen]="false">
-  <ion-card style="display: flex; justify-content: center; margin-top: 300px; flex-direction: column;">
-    <ion-card-header>
-      <ion-card-title>
-        Tabela de Escolas Registradas
-      </ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-list >
-
-        <ion-item lines="full">Arroz</ion-item>
-        <ion-item lines="full">Arroz</ion-item>
-        <ion-item lines="full">Arroz</ion-item>
-        <ion-item lines="full">Arroz</ion-item>
-        <ion-item lines="full">Arroz</ion-item>
-
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
+  <div>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          Tabela de Escolas Registradas
+        </ion-card-title>
+      </ion-card-header>
+      <div class="table100 ver1 m-b-110">
+        <div class="table100-head"></div>
+        <div class="table100-body js-pscroll ps ps--active-y"></div>
+      </div>
+      <table>
+        <thead>
+          <tr class="row100 head">
+            <th class="cell100 column1">Hello</th>
+            <th class="cell100 column1">World</th>
+            <th class="cell100 column1">Are</th>
+            <th class="cell100 column1">You</th>
+            <th class="cell100 column1">Okay</th>
+          </tr>
+        </thead>
+      </table>
+    </ion-card>
+  </div>
 </ion-content>
