@@ -10,18 +10,21 @@
     </ion-item>
   </ion-list>
   <div *ngIf="choosed">
-    <ion-list *ngFor="let classes of schoolClasses">
+    <ion-list *ngFor="let classes of results">
       <ion-item>
         <ion-label>{{classes.year + "ºAno " + classes.name}}</ion-label>
+        <ion-button (onclick)="buttonDeleteClass(classes.id)" fill="clear">
+          <ion-icon slot="icon-only" color="danger" name="trash-outline"></ion-icon>
+        </ion-button>
       </ion-item>
     </ion-list>
   </div>
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
-    <ion-fab-button #newClassesModal id="open-modal">
+    <ion-fab-button #newClassesModal id="open-modal-classes">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-  <ion-modal #modal trigger="newClassesModal" [canDismiss]="canDismiss">
+  <ion-modal #modal trigger="open-modal-classes" [canDismiss]="canDismiss">
     <ng-template>
       <ion-header>
         <ion-toolbar>
@@ -39,15 +42,18 @@
 
           <ion-input
             label="Ano"
+            id="yearModal"
             labelPlacement="stacked"
             [(ngModel)]="year"
             [clearInput]="true"
+            [clearOnEdit]="true"
             placeholder="Digite o ano dessa turma"
           >
           </ion-input>
 
           <ion-input
             label="Nome"
+            id="nameModal"
             labelPlacement="stacked"
             [(ngModel)]="name"
             [clearInput]="true"
@@ -57,6 +63,7 @@
 
           <ion-input
             label="Quantidade de Alunos"
+            id="qtdStudentsModal"
             labelPlacement="stacked"
             [(ngModel)]="studentsQtd"
             [clearInput]="true"

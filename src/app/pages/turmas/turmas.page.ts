@@ -16,12 +16,12 @@ export class TurmasPage implements OnInit, AfterViewInit
   @ViewChild("selectedSchool")selectedSchool!: IonSelectOption
   @ViewChild(IonModal, { static: false }) modal!: IonModal;
   schoolId!: string;
-  year!: number;
+  year!: string;
   name!: string;
-  studentsQtd!: number;
+  studentsQtd!: string;
   schools: ISchool[] = [];
   classes: IClasses[] = [];
-  public results: ISchool[] = [];
+  public results: IClasses[] = [];
   public schoolSelected!: ISchool | undefined;
   public schoolClasses!: IClasses[];
   public schoolClassesResults!: IClasses[];
@@ -37,14 +37,12 @@ export class TurmasPage implements OnInit, AfterViewInit
     this.newClassesModal.disabled = true;
   }
 
-  activateButton(event: any)
+  activateButton(event?: any)
   {
+    console.log("Foi carai")
     this.newClassesModal.disabled = false;
     this.schoolSelected = this.schools.find((school) => school.id === event.target.value);
     this.getClasses().then(() => {
-      this.schoolClasses = this.classes.filter((classe) => classe.schoolId == this.schoolSelected?.id);
-      console.log(this.schoolClasses);
-      console.log(this.schoolSelected)
       this.choosed = true;
     });
   }
@@ -53,46 +51,64 @@ export class TurmasPage implements OnInit, AfterViewInit
     this.http.get('http://localhost:3000/schools').subscribe(
       (data: any) => {
         this.schools = data;
-      },
-      error => {
+      }
+    ),
+      (error: any) => {
         console.error('Erro ao obter escolas', error);
       }
-    );
   }
 
   async getClasses() {
     this.http.get('http://localhost:3000/classes').subscribe(
       (data: any) => {
         this.classes = data;
-      },
-      error => {
-        console.error('Erro ao obter escolas', error);
+        this.schoolClasses = this.classes.filter((classe) => classe.schoolId == this.schoolSelected!.id);
+        this.results = [...this.schoolClasses];
       }
-    );
+    ),
+    (error: any) => {
+      console.error('Erro ao obter turmas', error);
+    };
   }
 
   async newClass() {
     this.http.post('http://localhost:3000/classes', {
-      schoolId: this.schoolId,
+      schoolId: this.schoolSelected?.id,
       name: this.name,
-      year: this.year,
-      studentsQtd: this.studentsQtd,
-    }).subscribe(
-      error => {
-        console.error('Erro ao criar turma', error);
-      }
-    );
+      year: parseInt(this.year),
+      studentsQtd: parseInt(this.studentsQtd),
+    }).subscribe(),
+    (error: any) => {
+      console.error('Erro ao criar nova classe', error);
+    };
   }
 
+  async deleteClass(id: string)
+  {
+    this.http.delete('http://localhost:3000/classes/' + id).subscribe(),
+    (error: any) =>
+    {
+      console.error('Erro ao deletar classe', error);
+    }
+  }
 
-  handleInput(event: any) {
-    const query = event.target.value.toLowerCase();
-    this.schoolClassesResults = this.schoolClasses.filter((d) => d.name.toLowerCase().indexOf(query) > -1);
+  buttonDeleteClass(id: string)
+  {
+    console.log("Entra aqui pelo menos?")
+    this.deleteClass(id).then(() =>
+    {
+      this.activateButton();
+    });
   }
 
   confirm()
   {
-    this.newClass().then(() => {this.modal.dismiss('confirm')});
+    this.newClass().then(() => {
+      this.year = '';
+      this.name = '';
+      this.studentsQtd = '';
+      this.modal.dismiss('confirm');
+    });
   }
 
   async canDismiss(data?: any, role?: string) {

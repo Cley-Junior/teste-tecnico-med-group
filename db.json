@@ -98,6 +98,41 @@
       "cep": "11231-231",
       "email": "Hugo@gmail.com",
       "phone": "(12) 31231-2412"
+    },
+    {
+      "id": "4981",
+      "name": "Escola da Alice",
+      "cep": "41231-241",
+      "email": "123123",
+      "phone": "(12) 41231-2312"
+    },
+    {
+      "id": "2766",
+      "name": "asd",
+      "cep": "12312-312",
+      "email": "123123",
+      "phone": "(12) 31231-2312"
+    },
+    {
+      "id": "2e05",
+      "name": "Geraldinho",
+      "cep": "12312-312",
+      "email": "123123123@gmail.com",
+      "phone": "(41) 23123-1234"
+    },
+    {
+      "id": "5ac4",
+      "name": "ansdjknajsdnasj",
+      "cep": "12312-312",
+      "email": "123123123123",
+      "phone": "(12) 31231-2312"
+    },
+    {
+      "id": "9655",
+      "name": "asdasd",
+      "cep": "12312-312",
+      "email": "123123123",
+      "phone": "(12) 31231-2312"
     }
   ],
   "classes": [
@@ -170,6 +205,367 @@
       "name": "A",
       "studentsQtd": 3,
       "schoolId": 4
+    },
+    {
+      "id": "e3af",
+      "name": "D",
+      "year": "2",
+      "studentsQtd": "42"
+    },
+    {
+      "id": "46d1",
+      "name": "D",
+      "year": "2",
+      "studentsQtd": "32"
+    },
+    {
+      "id": "bffd",
+      "name": "D",
+      "year": "3",
+      "studentsQtd": "23"
+    },
+    {
+      "id": "e5b7",
+      "schoolId": "2",
+      "name": "D",
+      "year": "3",
+      "studentsQtd": "32"
+    },
+    {
+      "id": "4a00",
+      "schoolId": "2",
+      "name": "A",
+      "year": "1",
+      "studentsQtd": "1"
+    },
+    {
+      "id": "110d",
+      "schoolId": "1",
+      "name": "D",
+      "year": "3",
+      "studentsQtd": "12"
+    },
+    {
+      "id": "032e",
+      "schoolId": "2",
+      "name": "A",
+      "year": "4",
+      "studentsQtd": "123"
+    },
+    {
+      "id": "305d",
+      "schoolId": "1",
+      "name": "D",
+      "year": "1",
+      "studentsQtd": "4"
+    },
+    {
+      "id": "a53b",
+      "schoolId": "3",
+      "name": "A",
+      "year": "1",
+      "studentsQtd": "12"
+    },
+    {
+      "id": "b894",
+      "schoolId": "4",
+      "name": "B",
+      "year": "2",
+      "studentsQtd": "5"
+    },
+    {
+      "id": "fde8",
+      "schoolId": "4",
+      "name": "B",
+      "year": "2",
+      "studentsQtd": "5"
+    },
+    {
+      "id": "f024",
+      "schoolId": "4",
+      "name": "B",
+      "year": "2",
+      "studentsQtd": "5"
+    },
+    {
+      "id": "f35a",
+      "schoolId": "4",
+      "name": "B",
+      "year": "2",
+      "studentsQtd": "5"
+    },
+    {
+      "id": "ac6b",
+      "schoolId": "4",
+      "name": "B",
+      "year": "2",
+      "studentsQtd": "5"
+    },
+    {
+      "id": "70c4",
+      "schoolId": "4",
+      "name": "B",
+      "year": "2",
+      "studentsQtd": "5"
+    },
+    {
+      "id": "e779",
+      "schoolId": "4",
+      "name": "B",
+      "year": "2",
+      "studentsQtd": "5"
+    },
+    {
+      "id": "056f",
+      "schoolId": "4",
+      "name": "B",
+      "year": "2",
+      "studentsQtd": "5"
+    },
+    {
+      "id": "f810",
+      "schoolId": "5",
+      "name": "A",
+      "year": "5",
+      "studentsQtd": "9"
+    },
+    {
+      "id": "bd22",
+      "schoolId": "5",
+      "name": "A",
+      "year": "4",
+      "studentsQtd": "7"
+    },
+    {
+      "id": "123b",
+      "schoolId": "5",
+      "name": "A",
+      "year": "4",
+      "studentsQtd": "7"
+    },
+    {
+      "id": "22c1",
+      "schoolId": "5",
+      "name": "B",
+      "year": "7",
+      "studentsQtd": "3"
+    },
+    {
+      "id": "6c0d",
+      "schoolId": "4",
+      "name": "A",
+      "year": 0,
+      "studentsQtd": "2"
+    },
+    {
+      "id": "c022",
+      "schoolId": "6",
+      "name": "A",
+      "year": "1",
+      "studentsQtd": "1"
+    },
+    {
+      "id": "d333",
+      "schoolId": "3",
+      "name": "asdasdasd",
+      "year": "asd",
+      "studentsQtd": "32"
+    },
+    {
+      "id": "cccb",
+      "schoolId": "4",
+      "name": "asd",
+      "year": null,
+      "studentsQtd": 2
+    },
+    {
+      "id": "370d",
+      "schoolId": "5",
+      "name": "asd",
+      "year": null,
+      "studentsQtd": 5
+    },
+    {
+      "id": "7ebf",
+      "schoolId": "6",
+      "name": "A",
+      "year": 4,
+      "studentsQtd": 32
+    },
+    {
+      "id": "8b9d",
+      "schoolId": "4a65",
+      "name": "D",
+      "year": 1,
+      "studentsQtd": 123
+    },
+    {
+      "id": "3f91",
+      "schoolId": "6",
+      "name": "B",
+      "year": 3,
+      "studentsQtd": 3
+    },
+    {
+      "id": "6430",
+      "schoolId": "6",
+      "name": "F",
+      "year": 2,
+      "studentsQtd": 3
+    },
+    {
+      "id": "6bda",
+      "schoolId": "5",
+      "name": "A",
+      "year": 6,
+      "studentsQtd": 3
+    },
+    {
+      "id": "90c4",
+      "schoolId": "4a65",
+      "name": "A",
+      "year": 2,
+      "studentsQtd": 5
+    },
+    {
+      "id": "1feb",
+      "schoolId": "8feb",
+      "name": "A",
+      "year": 4,
+      "studentsQtd": 9
+    },
+    {
+      "id": "3419",
+      "schoolId": "8feb",
+      "name": "A",
+      "year": 1,
+      "studentsQtd": 3
+    },
+    {
+      "id": "f5f9",
+      "schoolId": "8feb",
+      "name": "D",
+      "year": 2,
+      "studentsQtd": 1
+    },
+    {
+      "id": "0d85",
+      "schoolId": "8feb",
+      "name": "F",
+      "year": 3,
+      "studentsQtd": 3
+    },
+    {
+      "id": "6f08",
+      "schoolId": "8feb",
+      "name": "A",
+      "year": 4,
+      "studentsQtd": 123
+    },
+    {
+      "id": "7e81",
+      "schoolId": "8feb",
+      "name": "D",
+      "year": 5,
+      "studentsQtd": 123
+    },
+    {
+      "id": "ad36",
+      "schoolId": "4981",
+      "name": "A",
+      "year": 1,
+      "studentsQtd": 1
+    },
+    {
+      "id": "9ba5",
+      "schoolId": "4981",
+      "name": "B",
+      "year": 2,
+      "studentsQtd": 123
+    },
+    {
+      "id": "bdea",
+      "schoolId": "4981",
+      "name": "A",
+      "year": 3,
+      "studentsQtd": 123123
+    },
+    {
+      "id": "cd40",
+      "schoolId": "4981",
+      "name": "A",
+      "year": 2,
+      "studentsQtd": 1231
+    },
+    {
+      "id": "0c16",
+      "schoolId": "6",
+      "name": "G",
+      "year": 1,
+      "studentsQtd": 1241
+    },
+    {
+      "id": "456a",
+      "schoolId": "2766",
+      "name": "a",
+      "year": 1,
+      "studentsQtd": 123
+    },
+    {
+      "id": "da48",
+      "schoolId": "2766",
+      "name": "D",
+      "year": 2,
+      "studentsQtd": 1
+    },
+    {
+      "id": "2680",
+      "schoolId": "9efe",
+      "name": "A",
+      "year": 1,
+      "studentsQtd": 123
+    },
+    {
+      "id": "b5f2",
+      "schoolId": "2766",
+      "name": "A",
+      "year": 3,
+      "studentsQtd": 5
+    },
+    {
+      "id": "b129",
+      "schoolId": "4981",
+      "name": "D",
+      "year": 9,
+      "studentsQtd": 123
+    },
+    {
+      "id": "1cc8",
+      "schoolId": "5",
+      "name": "a",
+      "year": 8,
+      "studentsQtd": 123
+    },
+    {
+      "id": "9917",
+      "schoolId": "2",
+      "name": "A",
+      "year": 1,
+      "studentsQtd": 123
+    },
+    {
+      "id": "c587",
+      "schoolId": "1",
+      "name": "D",
+      "year": 4,
+      "studentsQtd": 123
+    },
+    {
+      "id": "05b2",
+      "schoolId": "3",
+      "name": "A",
+      "year": 9,
+      "studentsQtd": 123
     }
   ]
 }

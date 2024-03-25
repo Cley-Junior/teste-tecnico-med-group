@@ -47,10 +47,10 @@ export class EscolasPage implements OnInit
       (data: any) => {
         this.getSchools();
       },
-      error => {
+    ),
+      (error: any) => {
         console.error('Erro ao criar escola', error);
       }
-    );
   }
 
 
@@ -61,7 +61,13 @@ export class EscolasPage implements OnInit
 
   confirm()
   {
-    this.newSchool().then(() => {this.modal.dismiss('confirm')});
+    this.newSchool().then(() => {
+      this.name = '';
+      this.cep = '';
+      this.email = '';
+      this.phone = '';
+      this.modal.dismiss('confirm')
+    });
   }
 
   async canDismiss(data?: any, role?: string) {
