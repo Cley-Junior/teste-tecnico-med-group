@@ -4,6 +4,7 @@ import { IonButton, IonModal, IonSelectOption } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { MaskitoOptions, MaskitoElementPredicate } from '@maskito/core';
 import { IClasses } from 'src/interfaces/classes.interfaces';
+import { flatMap } from 'rxjs';
 
 @Component({
   selector: 'app-turmas',
@@ -39,7 +40,6 @@ export class TurmasPage implements OnInit, AfterViewInit
 
   activateButton(event?: any)
   {
-    console.log("Foi carai")
     this.newClassesModal.disabled = false;
     this.schoolSelected = this.schools.find((school) => school.id === event.target.value);
     this.getClasses().then(() => {
@@ -77,7 +77,10 @@ export class TurmasPage implements OnInit, AfterViewInit
       name: this.name,
       year: parseInt(this.year),
       studentsQtd: parseInt(this.studentsQtd),
-    }).subscribe(),
+    }).subscribe(data =>
+      {
+        this.getClasses()
+      }),
     (error: any) => {
       console.error('Erro ao criar nova classe', error);
     };
@@ -85,20 +88,20 @@ export class TurmasPage implements OnInit, AfterViewInit
 
   async deleteClass(id: string)
   {
-    this.http.delete('http://localhost:3000/classes/' + id).subscribe(),
+    this.http.delete('http://localhost:3000/classes/' + id).pipe()
+    .subscribe(data =>
+      {
+        this.getClasses()
+      }),
     (error: any) =>
     {
       console.error('Erro ao deletar classe', error);
     }
   }
 
-  buttonDeleteClass(id: string)
+  refresh()
   {
-    console.log("Entra aqui pelo menos?")
-    this.deleteClass(id).then(() =>
-    {
-      this.activateButton();
-    });
+    this.getClasses();
   }
 
   confirm()

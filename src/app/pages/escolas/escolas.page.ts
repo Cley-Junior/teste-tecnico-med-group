@@ -53,6 +53,17 @@ export class EscolasPage implements OnInit
       }
   }
 
+  async deleteSchool(id: string)
+  {
+    this.http.delete('http://localhost:3000/schools/' + id).subscribe(data =>
+    {
+      this.getSchools();
+    }),
+    (error: any) =>
+    {
+      console.error('Erro ao deletar classe', error);
+    }
+  }
 
   handleInput(event: any) {
     const query = event.target.value.toLowerCase();

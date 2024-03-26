@@ -6,6 +6,9 @@
   <ion-list *ngFor="let school of results">
     <ion-item>
       <ion-label>{{school.name}}</ion-label>
+      <ion-button (click)="deleteSchool(school.id)" fill="clear">
+        <ion-icon slot="icon-only" color="danger" name="trash-outline"></ion-icon>
+      </ion-button>
     </ion-item>
   </ion-list>
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">

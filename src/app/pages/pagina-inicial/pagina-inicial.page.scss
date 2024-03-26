@@ -19,7 +19,7 @@ ion-card
 {
   background-color: lightgray;
   display: flex;
-  justify-content: center;
+  justify-content: start;
 
   ion-card-content
   {
@@ -32,5 +32,5 @@ ion-content div
 {
   display: flex;
   justify-content: start;
-  padding-left: 40px;
+  padding-right: 50px;
 }
